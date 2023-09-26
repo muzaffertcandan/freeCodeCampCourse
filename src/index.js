@@ -1,42 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
-// const img = "./images/atomic.jpg";
-// const title = "Atomic Habits";
-// const author = "James Clear";
+//array içerisine koyduk objeleri
+const books = [
+  {
+    author: "James Clear",
+    title: "Atomic Habits",
+    img: "./images/atomic.jpg",
+  },
+  {
+    author: "Rick Riordan",
+    title: "Percy Jackson: The Demigod",
+    img: "./images/percy.jpg",
+  },
+];
+ 
 
-const firstBook = {
-  author: "James Clear",
-  title: "Atomic Habits",
-  img: "./images/atomic.jpg",
-};
-const secondBook = {
-  author: "Rick Riordan",
-  title: "Percy Jackson: The Demigod",
-  img: "./images/percy.jpg",
-};
+
+// const names = ["john","peter", "george"]
+// const newNames = names.map((item)=>{
+//   return <h1>{item}</h1>
+// })
 
 const BookList = () => {
   return (
     <section className="booklist">
-      <Book
-        author={firstBook.author}
-        title={firstBook.title}
-        img={firstBook.img}
-      >
-        {/* <p>
-          Text for nothing
-        </p>
-        <button>
-          Hey button
-        </button> */}
-      </Book>
-      <Book
-        author={secondBook.author}
-        title={secondBook.title}
-        img={secondBook.img}
-      />
+     {books.map(()=>{
+      return <div><h2></h2></div>
+     })}
     </section>
   );
 };
